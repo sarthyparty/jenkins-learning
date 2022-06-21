@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
+    agent { docker { image 'ruby:2.6.8p205' } }
     stages {
         stage('build') {
             steps {
-                sh 'echo "Hello World"'
+                sh 'ruby --version'
             }
         }
     }
